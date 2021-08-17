@@ -1,14 +1,14 @@
 .nav {
-    display: flex;
+  display: flex;
 
   &__container {
     display: flex;
   }
 
   &__menu {
-      background-color: #252525;
-      border: none;
-      cursor: pointer;
+    background-color: #252525;
+    border: none;
+    cursor: pointer;
   }
 
   &__list {
@@ -19,7 +19,6 @@
 
   &__item {
     font-family: "Poppins", serif;
-
   }
 
   &__link {
@@ -30,5 +29,4 @@
     text-align: left;
     color: #fff;
   }
-
 }
