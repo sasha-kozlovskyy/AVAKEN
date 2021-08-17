@@ -1,0 +1,34 @@
+.nav {
+    display: flex;
+
+  &__container {
+    display: flex;
+  }
+
+  &__menu {
+      background-color: #252525;
+      border: none;
+      cursor: pointer;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 56px;
+  }
+
+  &__item {
+    font-family: "Poppins", serif;
+
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #fff;
+  }
+
+}

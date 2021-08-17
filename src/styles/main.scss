@@ -1,7 +1,10 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "./components/header.scss";
+@import "./components/logo.scss";
+@import "./components/nav.scss";
 
 body {
-  background: $c-gray;
+  margin: 0;
 }
