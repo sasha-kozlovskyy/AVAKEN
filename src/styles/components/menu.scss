@@ -1,10 +1,115 @@
 .menu {
+  width: 24px;
+  height: 19px;
   position: absolute;
   right: 15px;
   top: 21px;
-  padding: 0;
+  border: none;
 
   @include OnDesktop {
     display: none;
   }
+
+  &--activ {
+    background-color: $c-black;
+  }
+}
+
+.white {
+  position: absolute;
+  background-color: $c-black;
+
+  &--opacity {
+    opacity: 0;
+  }
+
+  &__first-line {
+    width: 24px;
+    height: 3px;
+    background-color: $c-white;
+    margin-bottom: 5px;
+  }
+  
+  &__second-line {
+    width: 18px;
+    height: 3px;
+    background-color: $c-white;
+    margin-left: 6px;
+    margin-bottom: 5px;
+  }
+  
+  &__third-line {
+    width: 24px;
+    height: 3px;
+    background-color: $c-white;
+  }
+
+  &--activ {
+    display: none;
+  }
+}
+
+
+
+.black {
+  position: absolute;
+  background-color: $c-white;
+  opacity: 0;
+
+  &--opacity {
+    opacity: 1;
+  }
+
+  &__first-line {
+    width: 24px;
+    height: 3px;
+    background-color: $c-black;
+    margin-bottom: 5px;
+  }
+  
+  &__second-line {
+    width: 18px;
+    height: 3px;
+    background-color: $c-black;;
+    margin-left: 6px;
+    margin-bottom: 5px;
+  }
+  
+  &__third-line {
+    width: 24px;
+    height: 3px;
+    background-color: $c-black;
+    }
+
+  &--activ {
+    display: none;
+  }
+}
+
+.cross-black {
+  position: absolute;
+  display: none;
+  background-color: $c-white;
+  opacity: 0;
+
+  &--opacity {
+    opacity: 1;
+  }
+}
+
+.activ {
+  display: flex;
+}
+
+.cross-white {
+  position: absolute;
+  display: none;
+
+  &--opacity {
+    opacity: 0;
+  }
+}
+
+.activ {
+  display: flex;
 }

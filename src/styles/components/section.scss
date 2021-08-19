@@ -39,9 +39,7 @@
   }
 
   &__name {
-    font-family: "Poppins", serif;
     font-size: 12px;
-    font-style: normal;
     font-weight: 500;
     line-height: 16px;
     letter-spacing: 0.4em;
@@ -51,12 +49,11 @@
   }
 
   &__title {
-    font-family: "Poppins", serif;
     font-size: 18px;
     font-weight: 600;
     line-height: 23px;
     text-align: left;
-    color: #252525;
+    color: $c-black;
     margin-bottom: 16px;
   }
 
@@ -71,23 +68,40 @@
   }
 
   &__image-plus {
-    width: 25px;
-    height: 25px;
+    width: 57px;
+    height: 57px;
     align-self: flex-end;
     margin-bottom: 16px;
     margin-right: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    position: relative;
+
     &:hover {
       background: #7637dd;
-      transform: scale(2);
+    }
+
+    &:hover .section__icon--black {
+      opacity: 0;
+    }
+
+    &:hover .section__icon--white {
+      opacity: 1;
     }
   }
 
   &__icon {
     cursor: pointer;
+    position: absolute;
+
+    &--black {
+      opacity: 1;
+    }
+
+    &--white {
+      opacity: 0;
+    }
   }
 }
 

@@ -7,7 +7,7 @@
   &__container {
     margin: 0 15px 24px;
     padding: 20px;
-    background-color: #252525;
+    background-color: $c-black;
     display: flex;
     flex-direction: column;
 
@@ -24,17 +24,15 @@
       display: flex;
       gap: 20px;
     }
-
   }
 
   &__title {
     display: block;
-    font-family: "Poppins", serif;
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
     text-align: left;
-    color: #fff;
+    color: $c-white;
     margin-bottom: 8px;
 
     @include OnDesktop {
@@ -68,7 +66,7 @@
     font-weight: 400;
     line-height: 22px;
     text-align: left;
-    color: #fff;
+    color: $c-white;
     margin-bottom: 8px;
 
     @include OnDesktop {
@@ -95,17 +93,17 @@
     }
 
     &:focus {
-      background-color: #fff;
+      background-color: $c-white;
     }
   }
 
-  &__input--name {
+  &__label--name {
     @include OnDesktop {
       width: 50%;
     }
   }
 
-  &__input--phone {
+  &__label--phone {
     @include OnDesktop {
       width: 50%;
     }
@@ -118,9 +116,8 @@
     resize: none;
 
     &:focus {
-      background-color: #fff;
-  }
-    
+      background-color: $c-white;
+    }
   }
 
   &__button {
@@ -140,13 +137,12 @@
 
   &__link {
     text-decoration: none;
-    font-family: "Poppins", serif;
     font-size: 12px;
     font-weight: 600;
     line-height: 34px;
     letter-spacing: 1px;
     text-align: center;
-    color: #fff;
+    color: $c-white;
     display: flex;
     padding-left: 16px;
   }
@@ -157,4 +153,3 @@
     padding-left: 6px;
   }
 }
-

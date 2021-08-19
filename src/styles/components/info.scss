@@ -31,7 +31,6 @@
   }
 
   &__name {
-    font-family: "Poppins", serif;
     font-size: 10px;
     font-weight: 700;
     line-height: 10px;
@@ -63,7 +62,6 @@
   }
 
   &__title {
-    font-family: "Poppins", serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 31px;
@@ -81,10 +79,6 @@
 
   &__more-info {
     display: flex;
-
-    @include OnDesktop {
-
-    }
   }
 
   &__link {
@@ -92,7 +86,6 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    font-family: "Poppins", serif;
     font-size: 12px;
     font-weight: 600;
     line-height: 14px;

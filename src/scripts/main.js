@@ -1,11 +1,26 @@
 /* eslint-disable no-undef */
 'use strict';
 
-const h = document.querySelector('.menu');
-const n = document.querySelector('.nav');
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.nav');
+const white = document.querySelector('.white');
+const black = document.querySelector('.black');
+const crossWhite = document.querySelector('.cross-white');
+const crossBlack = document.querySelector('.cross-black');
+const header = document.querySelector('.header');
+const headerLogo = document.querySelector('.header__logo--position');
+const list = document.querySelectorAll('.nav__link');
+const link = Array.prototype.slice.call(list);
 
-h.addEventListener('click', () => {
-  n.classList.toggle('nav--activ');
+const origOffsetY = 1;
+
+menu.addEventListener('click', () => {
+  nav.classList.toggle('nav--activ');
+  crossWhite.classList.toggle('activ');
+  crossBlack.classList.toggle('activ');
+  white.classList.toggle('white--activ');
+  black.classList.toggle('black--activ');
+  menu.classList.toggle('menu--active');
 });
 
 // eslint-disable-next-line no-undef
@@ -19,10 +34,11 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
-const header = document.querySelector('.header');
-const link = document.querySelectorAll('.nav__link');
-
-const origOffsetY = 100;
+function onScrollLogo(e) {
+  window.scrollY >= origOffsetY
+    ? headerLogo.classList.add('display')
+    : headerLogo.classList.remove('display');
+}
 
 function onScroll(e) {
   window.scrollY >= origOffsetY
@@ -36,5 +52,34 @@ function onScrollColor(e) {
     : link.map(x => x.classList.remove('color'));
 }
 
+function onScrollOpacityWhite(e) {
+  window.scrollY >= origOffsetY
+    ? white.classList.add('white--opacity')
+    : white.classList.remove('white--opacity');
+}
+
+function onScrollOpacityBlack(e) {
+  window.scrollY >= origOffsetY
+    ? black.classList.add('black--opacity')
+    : black.classList.remove('black--opacity');
+}
+
+function onScrollCrossOpacityBlack(e) {
+  window.scrollY >= origOffsetY
+    ? crossBlack.classList.add('cross-black--opacity')
+    : crossBlack.classList.remove('cross-black--opacity');
+}
+
+function onScrollCrossOpacityWhite(e) {
+  window.scrollY >= origOffsetY
+    ? crossWhite.classList.add('cross-white--opacity')
+    : crossWhite.classList.remove('cross-white--opacity');
+}
+
 document.addEventListener('scroll', onScroll);
 document.addEventListener('scroll', onScrollColor);
+document.addEventListener('scroll', onScrollLogo);
+document.addEventListener('scroll', onScrollOpacityWhite);
+document.addEventListener('scroll', onScrollOpacityBlack);
+document.addEventListener('scroll', onScrollCrossOpacityBlack);
+document.addEventListener('scroll', onScrollCrossOpacityWhite);

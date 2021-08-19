@@ -1,6 +1,6 @@
 .nav {
   display: none;
-  background-color: #fff;
+  background-color: $c-white;
 
   @include OnDesktop {
     display: flex;
@@ -35,39 +35,34 @@
     flex-direction: column;
     align-items: center;
     gap: 72px;
-    color: #252525;
+    color: $c-black;
 
     @include OnDesktop {
       flex-direction: row;
       gap: 40px;
-      color: #fff;
-    };
+      color: $c-white;
+    }
 
     @include OnDesktop {
       gap: 56px;
     };
   }
 
-  &__item {
-    font-family: "Poppins", serif;
-  }
-
   &__link {
     text-decoration: none;
-    font-family: "Poppins", serif;
     font-size: 24px;
     font-weight: 500;
     line-height: 20px;
     text-align: left;
     cursor: pointer;
-    color: #252525;
+    color: $c-black;
 
     @include OnDesktop {
       font-size: 18px;
       font-weight: 500;
       line-height: 20px;
       text-align: left;
-      color: #fff;
+      color: $c-white;
     };
   }
 
@@ -76,13 +71,6 @@
   }
 }
 
-.menu {
-  background-color: #252525;
-  border: none;
-  cursor: pointer;
-}
-
 .color {
-  color: #252525;
-
+  color: $c-black;
 }

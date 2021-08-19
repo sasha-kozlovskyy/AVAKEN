@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
@@ -28,26 +28,69 @@
             </div>
           </div>
         </div>
+        <div class="header__logo header__logo--position">
+          <div class="logo">
+            <a href="/">
+              <img
+                src="./images/Logo-black.svg"
+                alt="logo"
+                class="logo__image"
+              >
+            </a>
+            <div class="logo__text">
+              <img
+                src="./images/Avaken--black.svg"
+                alt="logo__text"
+                class="logo__text"
+              >
+            </div>
+          </div>
+        </div>
       </div>
       <nav class="nav">
         <div class="nav__container">
           <ul class="nav__list" id="id">
-            <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">About</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Services</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">News</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Contacts</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#services">Services</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#news">News</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contacts">Contacts</a>
+            </li>
           </ul>
 
         </div>
       </nav>
-      <button class="menu">
+      <div class="menu">
+        <div class="white">
+          <div class="white__first-line"></div>
+          <div class="white__second-line"></div>
+          <div class="white__third-line"></div>
+        </div>
+        <div class="black">
+          <div class="black__first-line"></div>
+          <div class="black__second-line"></div>
+          <div class="black__third-line"></div>
+        </div>
         <img
-          src="./images/Menu icon--wigth.svg"
+          src="./images/Icon-croos-white.svg"
           alt="icon"
-          class="menu__icon"
+          class="cross-white"
         >
-      </button>
+        <img
+          src="./images/cross-black.svg"
+          alt="icon"
+          class="cross-black"
+        >
+      </div>
     </header>
     <main>
       <div class="page">
@@ -89,7 +132,7 @@
             <h1 class="page__title">Let’s build<br>something<br>great!</h1>
             <button class="page__button_info">
               <a
-                href="#"
+                href="#contacts"
                 class="page__link_details"
               >
                 Learn More
@@ -102,7 +145,7 @@
             </button>
           </div>
         </div>
-        <div class="info">
+        <div class="info" id="services">
           <div class="info__container">
             <div class="info__name">
               <span class="info__block">Services</span>
@@ -111,7 +154,7 @@
               Full-service digital<br>capabilities from end to end.
             </h2>
             <div class="info__more-info">
-              <a href="#" class="info__link">
+              <a href="#contacts" class="info__link">
                 <span class="info__text-link">See all services</span>
                 <img
                   src="./images/Icon-arrow-services.svg"
@@ -122,7 +165,7 @@
             </div>
           </div>
         </div>
-        <div class="section-wrapper">
+        <div class="section-wrapper" id="news">
           <section class="section">
             <div class="section__wrapper">
               <div class="section__container">
@@ -136,10 +179,15 @@
                 </div>
                 <div class="section__image-plus">
                   <img
-                    class="section__icon"
+                    class="section__icon section__icon--black"
                     src="./images/plus.svg"
                     alt="icon"
                   >
+                  <img
+                  class="section__icon section__icon--white"
+                  src="./images/plus (white).svg"
+                  alt="icon"
+                >
                 </div>
               </div>
             </div>
@@ -157,10 +205,15 @@
                 </div>
                 <div class="section__image-plus">
                   <img
-                  class="section__icon"
-                  src="./images/plus.svg"
-                  alt="icon"
-                >
+                    class="section__icon section__icon--black"
+                    src="./images/plus.svg"
+                    alt="icon"
+                  >
+                  <img
+                    class="section__icon section__icon--white"
+                    src="./images/plus (white).svg"
+                    alt="icon"
+                  >
                 </div>
               </div>
             </div>
@@ -178,8 +231,13 @@
                 </div>
                 <div class="section__image-plus">
                   <img
-                    mclass="section__icon"
+                    class="section__icon section__icon--black"
                     src="./images/plus.svg"
+                    alt="icon"
+                  >
+                  <img
+                    class="section__icon section__icon--white"
+                    src="./images/plus (white).svg"
                     alt="icon"
                   >
                 </div>
@@ -187,7 +245,7 @@
             </div>
           </section>
         </div>
-        <div class="info">
+        <div class="info" id="about">
           <div class="info__container">
             <div class="info__name">
               <span class="info__block">About us</span>
@@ -214,7 +272,7 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="footer__container">
         <div class="footer__image">
           <img
@@ -231,7 +289,7 @@
               <div class="form__wrapper">
                 <label
                   for="name"
-                  class="form__label form__input--name"
+                  class="form__label form__label--name"
                 >
                   Full Name
                   <input
@@ -242,7 +300,7 @@
                 </label>
                 <label
                   for="phone"
-                  class="form__label form__input--phone"
+                  class="form__label form__label--phone"
                 >
                   Phone
                   <input

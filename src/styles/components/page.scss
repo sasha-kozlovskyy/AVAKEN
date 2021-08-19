@@ -1,7 +1,6 @@
 .page {
   display: flex;
   flex-direction: column;
-  // position: relative;
 
   &__container {
     display: flex;
@@ -32,28 +31,25 @@
   }
 
   &__title {
-    // position: relative;
-    // z-index: 1;
-    font-family: "Poppins", serif;
     font-size: 30px;
     font-weight: 700;
     line-height: 36px;
     text-align: left;
-    color: #252525;
+    color: $c-black;
     margin-bottom: 32px;
 
     @include OnDesktop {
       margin-bottom: 45px;
       font-size: 72px;
       line-height: 80px;
-      letter-spacing: -0.015em;
+      letter-spacing: -0.01em;
     }
 
     @include OnBigDesktop {
       margin-bottom: 45px;
       font-size: 90px;
       line-height: 98px;
-      letter-spacing: -0.015em;
+      letter-spacing: -0.01em;
     }
   }
 
@@ -75,13 +71,12 @@
   }
 
   &__link_details {
-    font-family: "Poppins", serif;
     font-size: 12px;
     font-weight: 600;
     line-height: 34px;
     letter-spacing: 1px;
     text-align: center;
-    color: #fff;
+    color: $c-white;
     text-decoration: none;
     cursor: pointer;
     display: flex;
@@ -89,14 +84,10 @@
     align-items: center;
     gap: 6px;
 
-      @include OnDesktop {
-        gap: 10px;
-        font-size: 14px;
-        line-height: 45px;
+    @include OnDesktop {
+      gap: 10px;
+      font-size: 14px;
+      line-height: 45px;
     }
   }
-
-  // &__icon_arrow {
-
-  // }
 }
