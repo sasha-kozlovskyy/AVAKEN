@@ -1,15 +1,34 @@
 .form {
 
+  @include OnDesktop {
+    width: 50%;
+  }
+
   &__container {
     margin: 0 15px 24px;
     padding: 20px;
-    background-color:#252525;
+    background-color: #252525;
     display: flex;
     flex-direction: column;
+
+    @include OnDesktop {
+      height: 620px;
+      margin: 0;
+      padding: 32px 40px 0;
+    }
+  }
+
+  &__wrapper {
+
+    @include OnDesktop {
+      display: flex;
+      gap: 20px;
+    }
+
   }
 
   &__title {
-      display: block;
+    display: block;
     font-family: "Poppins", serif;
     font-size: 20px;
     font-weight: 600;
@@ -17,17 +36,28 @@
     text-align: left;
     color: #fff;
     margin-bottom: 8px;
+
+    @include OnDesktop {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 16px;
+    }
   }
 
   &__text {
-      display: block;
+    display: block;
     font-family: "Lato", serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    color: #C2C2C2;
+    color: #c2c2c2;
     margin-bottom: 20px;
+
+    @include OnDesktop {
+      margin-bottom: 24px;
+    }
+
   }
 
   &__label {
@@ -41,9 +71,13 @@
     color: #fff;
     margin-bottom: 8px;
 
+    @include OnDesktop {
+      margin-bottom: 24px;
+    }
+
     &::after {
       content: "";
-      background: #7637DD;
+      background: #7637dd;
       height: 2px;
       display: block;
   
@@ -51,25 +85,57 @@
   }
 
   &__input {
-    background: #3D3D3D;
-    height: 47px;
+    background: #3d3d3d;
+    height: 45px;
     border: none;
+    outline: none;
+
+    @include OnDesktop {
+      margin-top: 2px;
+    }
+
+    &:focus {
+      background-color: #fff;
+    }
+  }
+
+  &__input--name {
+    @include OnDesktop {
+      width: 50%;
+    }
+  }
+
+  &__input--phone {
+    @include OnDesktop {
+      width: 50%;
+    }
   }
 
   &__message {
-    background: #3D3D3D;
+    background: #3d3d3d;
     border: none;
+    outline: none;
+    resize: none;
+
+    &:focus {
+      background-color: #fff;
+  }
+    
   }
 
   &__button {
     width: 153px;
     height: 34px;
-    background: #7637DD;
+    background: #7637dd;
     margin-top: 20px;
     border: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include OnDesktop {
+      margin-top: 16px;
+    }
   }
 
   &__link {
@@ -91,3 +157,4 @@
     padding-left: 6px;
   }
 }
+

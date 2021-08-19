@@ -1,11 +1,38 @@
 .footer {
+  @include OnDesktop {
+    margin-bottom: 72px;
+  }
 
   &__container {
+
+    @include OnDesktop {
+      display: flex;
+      flex-direction: row;
+      margin: 0 60px;
+    }
+
+    @include OnBigDesktop {
+      margin: 0 110px;
+    }
+  }
+
+  &__image {
     padding: 0 15px;
+
+    @include OnDesktop {
+      height: 620px;
+      width: 50%;
+      padding: 0;
+
+    }
   }
 
   &__photo {
     width: 100%;
     object-fit: cover;
+
+    @include OnDesktop {
+      height: 100%;
+    }
   }
 }

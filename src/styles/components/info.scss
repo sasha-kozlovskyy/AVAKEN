@@ -2,6 +2,32 @@
 
   &__container {
     margin: 50px 15px 32px;
+
+    @include OnDesktop {
+      margin: 100px 60px 72px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include OnBigDesktop {
+      margin: 100px 110px 72px;
+    }
+  }
+
+  &__wrapper {
+    @include OnDesktop {
+      display: flex;
+      justify-content: space-between;
+      gap: 80px;
+
+    }
+  }
+
+  &__wrapper-text {
+    @include OnDesktop {
+      width: 50%;
+      padding-top: 5px;
+    }
   }
 
   &__name {
@@ -11,17 +37,28 @@
     line-height: 10px;
     letter-spacing: 0.4em;
     text-align: left;
-    color: #7637DD;
+    color: #7637dd;
     text-transform: uppercase;
     display: flex;
     align-items: center;
+
+    @include OnDesktop {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 13px;
+    }
 
     &::before {
       content: "";
       height: 2px;
       width: 20px;
-      background-color: #7637DD;
+      background-color: #7637dd;
       margin-right: 7px;
+
+      @include OnDesktop {
+        height: 2px;
+        width: 32px;
+      }
     }
   }
 
@@ -33,6 +70,21 @@
     text-align: left;
     margin: 8px 0 16px;
     color: #252525;
+
+    @include OnDesktop {
+      font-size: 50px;
+      line-height: 65px;
+      margin: 0;
+      width: 50%;
+    }
+  }
+
+  &__more-info {
+    display: flex;
+
+    @include OnDesktop {
+
+    }
   }
 
   &__link {
@@ -48,6 +100,11 @@
     text-align: center;
     color: #252525;
     cursor: pointer;
+
+    @include OnDesktop {
+      font-size: 14px;
+      line-height: 17px
+    }
   }
 
   &__text {
@@ -56,7 +113,8 @@
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    color: #5F5F5F;
+    color: #5f5f5f;
     margin-bottom: 16px;
+    display: flex;
   }
 }

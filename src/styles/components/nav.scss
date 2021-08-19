@@ -1,29 +1,30 @@
 .nav {
   display: none;
-//   position: absolute;
-//   position: relative;
-//   z-index: 2;
-//   position: absolute;
-//   transform: translateX(-100%);
+  background-color: #fff;
+
+  @include OnDesktop {
+    display: flex;
+    background: none;
+  }
 
   &--activ {
-    // transform: translateX(0);
+    z-index: 4;
     display: flex;
     justify-content: center;
     width: 100%;
-    // z-index: 2;
   }
   
   &__container {
     display: flex;
     align-items: center;
-    margin-top: 134px;
-  }
+    height: 100vh;
 
-  &__menu {
-    background-color: #252525;
-    border: none;
-    cursor: pointer;
+    @include OnDesktop {
+      margin: 0;
+      height: 120px;
+      justify-content: space-between;
+      padding-right: 110px;
+    }
   }
 
   &__list {
@@ -34,6 +35,17 @@
     flex-direction: column;
     align-items: center;
     gap: 72px;
+    color: #252525;
+
+    @include OnDesktop {
+      flex-direction: row;
+      gap: 40px;
+      color: #fff;
+    };
+
+    @include OnDesktop {
+      gap: 56px;
+    };
   }
 
   &__item {
@@ -48,10 +60,29 @@
     line-height: 20px;
     text-align: left;
     cursor: pointer;
-    color:  #252525;
+    color: #252525;
+
+    @include OnDesktop {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 20px;
+      text-align: left;
+      color: #fff;
+    };
   }
 
   &__link:hover {
-    color:#7637DD;
+    color: #7637dd;
   }
+}
+
+.menu {
+  background-color: #252525;
+  border: none;
+  cursor: pointer;
+}
+
+.color {
+  color: #252525;
+
 }

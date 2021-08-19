@@ -4,3 +4,15 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin OnDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin OnBigDesktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
