@@ -95,15 +95,16 @@
   }
 }
 
-.activ {
-  display: flex;
-}
-
 .cross-white {
   position: absolute;
   display: none;
+  opacity: 1;
 
   &--opacity {
     opacity: 0;
   }
+}
+
+.activ {
+  display: flex;
 }
