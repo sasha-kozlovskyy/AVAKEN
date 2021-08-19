@@ -45,7 +45,7 @@
 
     @include OnDesktop {
       gap: 56px;
-    };
+    }
   }
 
   &__link {
@@ -63,7 +63,7 @@
       line-height: 20px;
       text-align: left;
       color: $c-white;
-    };
+    }
   }
 
   &__link:hover {

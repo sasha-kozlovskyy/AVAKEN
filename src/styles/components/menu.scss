@@ -49,8 +49,6 @@
   }
 }
 
-
-
 .black {
   position: absolute;
   background-color: $c-white;
@@ -70,7 +68,7 @@
   &__second-line {
     width: 18px;
     height: 3px;
-    background-color: $c-black;;
+    background-color: $c-black;
     margin-left: 6px;
     margin-bottom: 5px;
   }
@@ -79,7 +77,7 @@
     width: 24px;
     height: 3px;
     background-color: $c-black;
-    }
+  }
 
   &--activ {
     display: none;
@@ -108,8 +106,4 @@
   &--opacity {
     opacity: 0;
   }
-}
-
-.activ {
-  display: flex;
 }

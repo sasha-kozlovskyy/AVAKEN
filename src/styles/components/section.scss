@@ -21,6 +21,9 @@
     @include OnDesktop {
       height: 250px;
     }
+    @include OnBigDesktop {
+      height: 200px;
+    }
   }
 
   &__decoration {
@@ -67,12 +70,25 @@
 
   }
 
+  &__icon {
+    cursor: pointer;
+    position: absolute;
+
+    &--black {
+      opacity: 1;
+    }
+
+    &--white {
+      opacity: 0;
+    }
+  }
+
   &__image-plus {
     width: 57px;
     height: 57px;
     align-self: flex-end;
-    margin-bottom: 16px;
-    margin-right: 16px;
+    // margin-bottom: 16px;
+    // margin-right: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,19 +104,6 @@
 
     &:hover .section__icon--white {
       opacity: 1;
-    }
-  }
-
-  &__icon {
-    cursor: pointer;
-    position: absolute;
-
-    &--black {
-      opacity: 1;
-    }
-
-    &--white {
-      opacity: 0;
     }
   }
 }
