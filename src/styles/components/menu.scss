@@ -13,6 +13,7 @@
   &--activ {
     background-color: $c-black;
   }
+
 }
 
 .white {
@@ -90,6 +91,10 @@
   background-color: $c-white;
   opacity: 0;
 
+  // &--disabled {
+  //   display: none;
+  // }
+
   &--opacity {
     opacity: 1;
   }
@@ -99,6 +104,10 @@
   position: absolute;
   display: none;
   opacity: 1;
+
+  // &--disabled {
+  //   display: none;
+  // }
 
   &--opacity {
     opacity: 0;

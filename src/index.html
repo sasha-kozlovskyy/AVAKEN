@@ -135,9 +135,8 @@
           </div>
           <div class="page__options">
             <h1 class="page__title">Let’s build<br>something<br>great!</h1>
-            <button class="page__button_info">
-              <a
-                href="#contacts"
+            <a href="#contacts" class="page__button_info">
+              <div
                 class="page__link_details"
               >
                 Learn More
@@ -146,8 +145,8 @@
                   src="./images/Icon-aarow.svg"
                   alt="arrow"
                 >
-              </a>
-            </button>
+            </div>
+          </a>
           </div>
         </div>
         <div class="info" id="services">
@@ -288,7 +287,7 @@
         </div>
         <div class="form">
           <div class="form__container">
-            <form action="POST">
+            <form action="" method="POST" id="submit" onsubmit="event.preventDefault();">
               <span class="form__title">Write Me.</span>
               <span class="form__text">Sit et vulputate posuere id diam ac eget lacinia enim. Id congue sapien libero sed. Aliquet amet eget placerat facilisis leo, sit consequat.</span>
               <div class="form__wrapper">
@@ -337,26 +336,22 @@
                   cols="30"
                   rows="7"
                   class="form__message"
-                >
-                </textarea>
+               ></textarea>
               </label>
-            </form>
-            <button
+              <button
               class="form__button"
               type="reset"
             >
-              <a
-                href=""
-                class="form__link"
-              >
+              <span class="form__link">
                 Send Message
                 <img
                   src="./images/Icon-arrow-last.svg"
                   alt="icon"
                   class="form__icon"
                 >
-              </a>
+              </span>
             </button>
+            </form>
           </div>
         </div>
       </div>

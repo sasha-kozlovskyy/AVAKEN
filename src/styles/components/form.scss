@@ -114,6 +114,7 @@
     border: none;
     outline: none;
     resize: none;
+    text-align: start;
 
     &:focus {
       background-color: $c-white;
@@ -131,7 +132,7 @@
     align-items: center;
 
     @include OnDesktop {
-      margin-top: 16px;
+      margin-top: 40px;
     }
   }
 

@@ -11,8 +11,13 @@ const header = document.querySelector('.header');
 const headerLogo = document.querySelector('.header__logo--position');
 const list = document.querySelectorAll('.nav__link');
 const link = Array.prototype.slice.call(list);
-
 const origOffsetY = 1;
+
+const form = document.getElementById('submit');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+});
 
 menu.addEventListener('click', () => {
   nav.classList.toggle('nav--activ');
@@ -22,6 +27,14 @@ menu.addEventListener('click', () => {
   black.classList.toggle('black--activ');
   menu.classList.toggle('menu--active');
 });
+
+link.map(item => item.addEventListener('click', () => {
+  nav.classList.remove('nav--activ');
+  crossWhite.classList.remove('activ');
+  crossBlack.classList.remove('activ');
+  white.classList.remove('white--activ');
+  black.classList.remove('black--activ');
+}));
 
 // eslint-disable-next-line no-undef
 // eslint-disable-next-line no-unused-vars

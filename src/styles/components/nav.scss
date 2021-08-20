@@ -2,6 +2,10 @@
   display: none;
   background-color: $c-white;
 
+  // &--disabled {
+  //   display: none;
+  // }
+
   @include OnDesktop {
     display: flex;
     background: none;
@@ -13,7 +17,7 @@
     justify-content: center;
     width: 100%;
   }
-  
+
   &__container {
     display: flex;
     align-items: center;
@@ -56,6 +60,7 @@
     text-align: left;
     cursor: pointer;
     color: $c-black;
+    transition: 0.5s linear;
 
     @include OnDesktop {
       font-size: 18px;

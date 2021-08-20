@@ -6,6 +6,7 @@
   z-index: 3;
   background-color: $c-black;
   height: 60px;
+  transition: linear 1s;
 
   @include OnDesktop {
     flex-direction: row;

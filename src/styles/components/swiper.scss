@@ -43,14 +43,19 @@
   display: flex;
   width: 14px;
   height: 12px;
+  padding: 12px;
+  box-sizing: content-box;
 
   @include OnDesktop {
     width: 20px;
     height: 18px;
+    padding: 24px;
   }
 }
 
 .swiper-button-right {
+  padding: 12px;
+  box-sizing: content-box;
   display: flex;
   width: 14px;
   height: 12px;
@@ -58,6 +63,7 @@
   @include OnDesktop {
     width: 20px;
     height: 18px;
+    padding: 24px;
   }
 }
 
